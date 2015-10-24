@@ -195,7 +195,6 @@ var hifm = React.createClass({
                 {
                     channelsView
                 }
-
             </ScrollView>
           </View>
       </View>
