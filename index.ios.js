@@ -192,7 +192,6 @@ var hifm = React.createClass({
                 height: 259,
                 opacity: 0.4
             }}>
-
                 {
                     channelsView
                 }
