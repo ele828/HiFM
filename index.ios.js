@@ -59,7 +59,7 @@ var hifm = React.createClass({
   },
 
   getAudioInfo: function() {
-    let musicUrl = "http://douban.fm/j/mine/playlist?channel=6";
+    let musicUrl = "http://douban.fm/j/mine/playlist?channel=7";
     return fetch(musicUrl)
         .then((res) => res.json())
         .then((res) => {

@@ -55,6 +55,28 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  
+  
+  UIDevice* device = [UIDevice currentDevice];
+  if ([device respondsToSelector:@selector(isMultitaskingSupported)]) {
+    if(device.multitaskingSupported) {
+      NSLog(@"background supported");
+      
+      AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+      NSError *aError = nil;
+      [audioSession setCategory:AVAudioSessionCategoryPlayback error:&aError];
+      if(aError){
+        NSLog(@"set Category error:%@", [aError description]);
+      }
+      aError = nil;
+      [audioSession setActive:YES error:&aError];
+      if(aError){
+        NSLog(@"active Category error:%@", [aError description]);
+      }
+//      audioSession.delegate = [rootView sharedInstance];
+    }
+  }
+  
   return YES;
 }
 

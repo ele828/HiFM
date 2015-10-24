@@ -8,6 +8,7 @@
  */
 
 #import <UIKit/UIKit.h>
+@import AVFoundation;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
